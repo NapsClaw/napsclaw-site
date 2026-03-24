@@ -37,11 +37,11 @@ export default function HowItWorks() {
         </div>
 
         {/* Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 max-w-sm lg:max-w-5xl mx-auto">
           {steps.map((step, i) => (
             <div key={step.number} className="relative group h-full">
               {i < steps.length - 1 && (
-                <div className="connector-line hidden md:block" />
+                <div className="connector-line hidden lg:block" />
               )}
               <div className="card-base relative p-8 h-full">
                 <div className="number-ghost">{step.number}</div>
