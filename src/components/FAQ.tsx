@@ -90,7 +90,7 @@ export default function FAQ() {
 
   return (
     <section id="faq" className="py-24 sm:py-32 relative">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container-sm" style={{ maxWidth: "768px" }}>
         {/* Section header */}
         <div className="text-center mb-16">
           <p className="section-label">Dúvidas?</p>

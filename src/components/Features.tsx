@@ -45,7 +45,7 @@ const features = [
 export default function Features() {
   return (
     <section id="recursos" className="py-24 sm:py-32 relative grid-bg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container-lg">
         {/* Section header */}
         <div className="text-center mb-16 sm:mb-20">
           <p className="section-label">Tudo incluso</p>
@@ -58,7 +58,7 @@ export default function Features() {
         </div>
 
         {/* Features grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 xl:gap-6 max-w-sm sm:max-w-2xl xl:max-w-5xl mx-auto">
+        <div className="grid-features">
           {features.map((feature) => (
             <div key={feature.title} className="card-base group relative p-7 h-full">
               <div className="relative">

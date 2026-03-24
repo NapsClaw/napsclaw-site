@@ -53,7 +53,7 @@ export default function HeroSection() {
         }}
       />
 
-      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 w-full text-center" style={{ maxWidth: "896px", margin: "0 auto", padding: "0 16px" }}>
         {/* Badge */}
         <div className="badge-accent mb-10 mx-auto w-fit">
           <Sparkles className="w-3.5 h-3.5" style={{ color: "#22c55e" }} />

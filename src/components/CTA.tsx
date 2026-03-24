@@ -15,7 +15,7 @@ export default function CTA() {
         }}
       />
 
-      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative text-center" style={{ maxWidth: "896px", margin: "0 auto", padding: "0 16px" }}>
         {/* Decorative line */}
         <div
           className="w-16 h-px mx-auto mb-10"

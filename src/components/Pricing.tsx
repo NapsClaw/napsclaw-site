@@ -58,7 +58,7 @@ export default function Pricing() {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative container-lg">
         {/* Section header */}
         <div className="text-center mb-16 sm:mb-20">
           <p className="section-label">Preços transparentes</p>
@@ -69,7 +69,7 @@ export default function Pricing() {
         </div>
 
         {/* Plans grid */}
-        <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 xl:gap-8 max-w-sm xl:max-w-5xl mx-auto items-start">
+        <div className="grid-3col">
           {plans.map((plan) => (
             <div
               key={plan.extension}

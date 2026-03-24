@@ -29,7 +29,7 @@ export default function Header() {
         borderBottom: scrolled ? "1px solid rgba(255,255,255,0.06)" : "1px solid transparent",
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container-lg">
         <div className="flex items-center justify-between h-16 sm:h-20">
           <a href="/" className="flex items-center gap-2.5 group">
             <span className="text-2xl">🦞</span>

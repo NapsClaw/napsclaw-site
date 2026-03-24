@@ -26,7 +26,7 @@ const steps = [
 export default function HowItWorks() {
   return (
     <section id="como-funciona" className="py-24 sm:py-32 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container-lg">
         {/* Section header */}
         <div className="text-center mb-16 sm:mb-20">
           <p className="section-label">Simples e rápido</p>
@@ -37,7 +37,7 @@ export default function HowItWorks() {
         </div>
 
         {/* Steps */}
-        <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 xl:gap-8 max-w-sm xl:max-w-5xl mx-auto">
+        <div className="grid-3col">
           {steps.map((step, i) => (
             <div key={step.number} className="relative group h-full">
               {i < steps.length - 1 && (
