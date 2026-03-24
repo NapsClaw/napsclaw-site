@@ -69,11 +69,11 @@ export default function Pricing() {
         </div>
 
         {/* Plans grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 max-w-5xl mx-auto items-start px-2 sm:px-4">
           {plans.map((plan) => (
             <div
               key={plan.extension}
-              className={`relative flex flex-col ${plan.popular ? "card-popular md:scale-105 md:-my-4" : "card-base"}`}
+              className={`relative flex flex-col ${plan.popular ? "card-popular" : "card-base"}`}
             >
               {plan.popular && (
                 <div className="popular-badge">
