@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import {
   Globe,
   ShieldCheck,
@@ -9,6 +8,7 @@ import {
   Zap,
   Lock,
 } from "lucide-react";
+import AnimateIn from "./AnimateIn";
 
 const features = [
   {
@@ -51,57 +51,46 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="recursos" className="py-24 sm:py-32 relative">
+    <section id="recursos" className="py-24 sm:py-32 relative grid-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16 sm:mb-20"
-        >
-          <span className="text-accent text-sm font-semibold uppercase tracking-wider">
+        <AnimateIn className="text-center mb-16 sm:mb-20">
+          <p className="text-accent text-sm font-semibold uppercase tracking-[0.2em] mb-4">
             Tudo incluso
-          </span>
-          <h2 className="font-[family-name:var(--font-heading)] text-3xl sm:text-4xl md:text-5xl font-bold mt-4 mb-6">
+          </p>
+          <h2 className="font-[family-name:var(--font-heading)] text-3xl sm:text-4xl md:text-5xl font-bold mb-6 tracking-tight">
             Recursos que fazem{" "}
             <span className="gradient-text">a diferença</span>
           </h2>
-          <p className="text-muted text-lg max-w-xl mx-auto">
+          <p className="text-muted text-base sm:text-lg max-w-lg mx-auto leading-relaxed">
             Cada domínio registrado vem com um pacote completo de recursos sem
             custo adicional.
           </p>
-        </motion.div>
+        </AnimateIn>
 
         {/* Features grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
           {features.map((feature, i) => (
-            <motion.div
-              key={feature.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="group relative bg-surface border border-border rounded-2xl p-8 hover:border-accent/30 transition-all duration-300"
-            >
-              {/* Hover glow */}
-              <div className="absolute inset-0 rounded-2xl bg-accent/3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <AnimateIn key={feature.title} delay={i * 0.07}>
+              <div className="group relative bg-surface/40 border border-white/[0.06] rounded-2xl p-7 hover:border-accent/15 transition-all duration-500 h-full">
+                {/* Hover effect */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-accent/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-              <div className="relative">
-                {/* Icon */}
-                <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-accent/20 group-hover:scale-110 transition-all duration-300">
-                  <feature.icon className="w-6 h-6 text-accent" />
+                <div className="relative">
+                  {/* Icon */}
+                  <div className="w-12 h-12 bg-accent/[0.08] rounded-xl flex items-center justify-center mb-5 group-hover:bg-accent/[0.12] transition-all duration-300 border border-accent/[0.06]">
+                    <feature.icon className="w-5 h-5 text-accent" />
+                  </div>
+
+                  <h3 className="font-[family-name:var(--font-heading)] text-lg font-bold mb-2.5 tracking-tight">
+                    {feature.title}
+                  </h3>
+                  <p className="text-muted text-sm leading-relaxed">
+                    {feature.description}
+                  </p>
                 </div>
-
-                <h3 className="font-[family-name:var(--font-heading)] text-lg font-bold mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-muted text-sm leading-relaxed">
-                  {feature.description}
-                </p>
               </div>
-            </motion.div>
+            </AnimateIn>
           ))}
         </div>
       </div>

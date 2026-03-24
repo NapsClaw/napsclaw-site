@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Plus_Jakarta_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const plusJakarta = Plus_Jakarta_Sans({
+  variable: "--font-body",
   subsets: ["latin"],
   display: "swap",
 });
 
 const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+  variable: "--font-heading",
   subsets: ["latin"],
   display: "swap",
 });
@@ -44,9 +44,9 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}
+      className={`${plusJakarta.variable} ${spaceGrotesk.variable} antialiased`}
     >
-      <body className="min-h-screen bg-background text-foreground">
+      <body className="min-h-screen bg-[#0a0a0a] text-[#ededed]">
         {children}
       </body>
     </html>
