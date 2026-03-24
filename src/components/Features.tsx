@@ -58,7 +58,7 @@ export default function Features() {
         </div>
 
         {/* Features grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6 max-w-4xl mx-auto">
           {features.map((feature) => (
             <div key={feature.title} className="card-base group relative p-7 h-full">
               <div className="relative">

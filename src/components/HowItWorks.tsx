@@ -37,7 +37,7 @@ export default function HowItWorks() {
         </div>
 
         {/* Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-4xl mx-auto">
           {steps.map((step, i) => (
             <div key={step.number} className="relative group h-full">
               {i < steps.length - 1 && (

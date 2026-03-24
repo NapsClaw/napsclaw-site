@@ -69,7 +69,7 @@ export default function Pricing() {
         </div>
 
         {/* Plans grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 max-w-5xl mx-auto items-start px-2 sm:px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-4xl mx-auto items-start">
           {plans.map((plan) => (
             <div
               key={plan.extension}
